@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="stylesheet" type="text/css" href="style導覽頁.css">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    <title>履歷作品集</title>
+</head>
+<style>
+    /*border: 2px solid black;*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+
+/*側邊選單*/
+.wrapper ui{
+    position: fixed;
+    left: 0px;
+    top:25%;
+    margin: auto;
+    list-style-type: none;
+    float: left;
+    background-color: white;
+    z-index: 1;
+    
+}
+.wrapper ui li{
+    margin: 12px 12px 0;
+    text-align: left;
+    text-decoration: underline;
+    padding: 4px 12px;
+    background-color: #93A8AC;
+    border-radius: 24px;
+}
+.wrapper ui li a{
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.wrapper ui :hover{
+    transform-origin:center;
+    transform:scale(1.2);
+}
+.glyphicon{
+    color: white;
+    width: 24px;
+    height: 24px;
+    margin: 8px;
+}
+h3{
+    font-size: 20px;
+    font-weight: 600;
+    border-bottom:2px dashed #93A8AC ;
+    position: relative;
+    left: 15%;
+    display: inline-block;
+
+}
+
+/*自我介紹*/
+.about_me{
+    width: 600px;
+    height: 400px;
+    position: relative;
+    left:30%;
+    top: 30px;
+    text-align: left;
+}
+
+.about_me_container{
+    text-align: center;
+    position: relative;
+    margin-bottom: 12px;
+}
+.about_me_container img{
+display: block;
+margin-left: 20px;
+width: 240px;
+border-radius :30px;
+
+}
+.about_me_container p{
+font-size:24px;
+display: inline-block;
+}
+.about_me_container .name{
+position: absolute;
+left: 280px;
+top: 50px;
+}
+.about_me_container .email{
+position: absolute;
+left: 280px;
+top: 100px;
+}
+.introduce{
+margin: 21px;
+font-size: 19px;
+}
+
+/*語言能力/技能*/
+.skill_container{
+    width: 600px;
+    height: 400px;
+    position: relative;
+    left:30%;
+    text-align: left;
+    margin: 24px;
+}
+.skill_container th{
+    text-align: center;
+    font-size: 18px;
+    color: gray;
+}
+
+.skill_container .skill{
+    text-align: center;
+    width: 60px;
+    background-color: #93A8AC;
+    border: white solid 2px;
+
+}
+.skill_container .ex{
+    border: 2px solid #93A8AC;
+    padding-left: 8px;
+}
+
+/*經驗*/
+
+.experience_container{
+    position: relative;
+    padding: 12px;
+    left: 28%;
+    
+    width: 720px;
+    display: flex;
+    text-align: center;
+}
+.experience_container .card{
+    display:flexbox;
+    width:360px;
+    margin: 24px;
+    padding: 4px;
+    position: relative;
+    text-align: center;
+    background-color: white;
+    border-radius: 24px;
+    box-shadow: 3px 3px 12px rgba(128, 128, 128, 0.662);padding:3px;
+}
+.experience_container .card img{
+    margin-top: 24px;
+    width: 120px;
+    height: 120px;
+    border-radius:100px;
+    object-fit:cover;
+}
+.experience_container .card .content{
+    padding: 4px;
+}
+.experience_container .card .content .title{
+    text-align: center;
+    font-size: 24px;
+    margin: 8px 0;
+
+}
+.advantage{
+    list-style: none;
+    font-size: 14px;
+}
+.advantage li{
+    margin: 4px;
+}
+
+/*作品集*/
+.work_container{
+    display: flex;
+    flex-wrap:wrap;
+    align-content:space-around;
+    justify-content: space-around;
+}
+.work_container .card{
+    display:flexbox;
+    width: 80px;
+    margin: 8px;
+    position: relative;
+    text-align: center;
+    background-color: white;
+    border-radius: 24px;
+    
+}
+.work_container .card img{
+    margin-top: 24px;
+    width: 240px;
+    height: 240px;
+    border-radius:24px;
+    object-fit:cover;
+}
+.sort{
+    text-align: left;
+    position: relative;
+    margin-left: 220px;
+    font-size: 24px;
+    font-weight: 700;
+}
+.work_container .title{
+    position: relative;
+    left: 40%;
+    color: black;
+    font-size: 18px;
+    width: 180px;
+}
+</style>
+<body>
+    <!--側邊選單-->
+    <div class="wrapper">
+        <ui class="menu">
+            <li><a href="#1">
+                    <i class="glyphicon glyphicon-user"></i>
+                    About me</a>
+            </li>
+            <li><a href="#2">
+                    <i class="glyphicon glyphicon-book"></i>Skills</li>
+            <li><a href="#3">
+                    <i class="glyphicon glyphicon-briefcase"></i>Experience</a></li>
+            <li><a href="#4">
+                    <i class="glyphicon glyphicon-paperclip"></i>Works</a></li>
+        </ui>
+    </div>
+    <!--自我介紹-->
+    <a id="1"></a>
+    <h3 class="me">About Me</h3>
+    <div class="about_me">
+        <div class="about_me_container">
+            <img src="D:\圖片\小可愛\2.jpg" alt="我的照片">
+            <p class="name">李韻涵</p>
+            <p class="email">yhlp0127@gmail.com</p>
+        </div>
+        <div class="introduce">
+            <p>目前就讀於東吳大學資管系，在大二時發現對前端設計有興趣，所以開始自學Figma、UI/UX，但當要實際demo學校作業、自我練習的作品給教授看或是自己在操作時總覺得無法順利讓一個網頁或app實際運作，所以對前端開法產生興趣也在大三開始自學了基礎前端語言。在練習時覺得很有趣，雖然都是一些基礎，但在coding時還是覺得蠻有成就感。
+            </p>
+        </div>
+    </div>
+    <hr>
+    <!--技能-->
+    <a id="2"></a>
+    <h3 class="skills">Skills</h3>
+    <table class="skill_container">
+
+        <tr>
+            <thead>
+                <th>技能</th>
+                <th>說明</th>
+            </thead>
+        </tr>
+        <tr>
+            <tbody>
+                <td class="skill">JAVA</td>
+                <td class="ex">從大一開始學，有打好基礎，也順利通過了學校的檢定考。</td>
+            </tbody>
+        </tr>
+        <tr>
+            <tbody>
+                <td class="skill">HTML</td>
+                <td class="ex">大三開始自學，上網找影片學，也大概了解網頁架構是如何組成。</td>
+            </tbody>
+        </tr>
+        <tr>
+            <tbody>
+                <td class="skill">CSS</td>
+                <td class="ex">大三開始自學，上網找影片學，簡單排版及屬性使用都有一定基礎，目前還在摸索當中。</td>
+            </tbody>
+        </tr>
+        <tr>
+            <tbody>
+                <td class="skill">Figma</td>
+                <td class="ex">從大二開始自學此設計工具，熟悉Figma操作，也曾經使用Figma完成小專案。
+                </td>
+            </tbody>
+        </tr>
+        <tr>
+            <tbody>
+                <td class="skill">Drawio</td>
+                <td class="ex">曾利用Drawio製作ERP、Usecase等圖，能熟悉操作。</td>
+            </tbody>
+        </tr>
+        <tr>
+            <tbody>
+                <td class="skill">UI / UX</td>
+                <td class="ex">大二時開始自學相關知識，以線上課程加強觀念理論，再利用Figma時做練習。</td>
+            </tbody>
+        </tr>
+    </table>
+    <hr>
+    <!--經驗-->
+    <a id="3"></a>
+    <h3 class="Experience">Experience</h3>
+    <div class="experience_container">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                alt="photo"></img>
+            <div class="content">
+                <p class="title">咖啡廳</p>
+                <ui class="advantage">
+                    <li>應變能力</li>
+                    <li>合作</li>
+                    <li>學習熱忱</li>
+                </ui>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1532619187608-e5375cab36aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                alt="photo"></img>
+            <div class="content">
+                <p class="title">補習班</p>
+                <ui class="advantage">
+                    <li>耐心</li>
+                    <li>整合能力</li>
+                    <li>溝通能力</li>
+                    <li>安排時程/進度</li>
+                </ui>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1530099486328-e021101a494a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1247&q=80"
+                alt="photo"></img>
+            <div class="content">
+                <p class="title">系學會</p>
+                <ui class="advantage">
+                    <li>公關</li>
+                    <li>不怕生</li>
+                </ui>
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <!--練習作品-->
+    <a id="4"></a>
+    <h3 class="Works">Works</h3>
+    <div class="sort">
+        HTML / CSS
+    </div>
+    <div class="work_container">
+        <a href="D:/HTML/登入頁面.html">
+            <div class="card">
+                <img src="C:\Users\b2986\OneDrive\桌面\實習\作品集\登入頁面.jpg" alt="photo"></img>
+                <div class="content">
+                    <p class="title">登入頁面</p>
+                </div>
+            </div>
+        </a>
+        <a href="file:///D:/HTML/%E7%B7%B4%E7%BF%92.html?">
+            <div class="card">
+                <img src="C:\Users\b2986\OneDrive\桌面\實習\作品集\註冊頁面.jpg" alt="photo"></img>
+                <div class="content">
+                    <p class="title">註冊頁面</p>
+
+                </div>
+            </div>
+        </a>
+        <a href="file:///D:/HTML/%E5%8D%A1%E7%89%87%E9%A0%81%E9%9D%A2.html">
+            <div class="card">
+                <img src="C:\Users\b2986\OneDrive\桌面\實習\作品集\卡片練習.jpg" alt="photo"></img>
+                <div class="content">
+                    <p class="title">卡片練習</p>
+                </div>
+            </div>
+        </a>
+    </div>
+</body>
+<hr>
+<div class="sort">
+    Figma / UI / UX
+</div>
+<div class="work_container">
+    <a href="https://www.figma.com/file/l7NNZgx80ZNKWzIfH7FrHo/%E6%95%B8%E4%BD%8D%E5%85%A7%E5%AE%B9%E8%A8%AD%E8%A8%88">
+        <div class="card">
+            <img src="C:\Users\b2986\OneDrive\桌面\實習\作品集\小專題1.jpg" alt="photo"></img>
+            <div class="content">
+                <p class="title">小專題1</p>
+            </div>
+        </div>
+    </a>
+    <a href="https://www.figma.com/file/K6a577YBhTa8wWCLh9l8H5/%E5%BE%B5%E6%89%8D%E7%B3%BB%E7%B5%B1?node-id=0%3A1">
+        <div class="card">
+            <img src="C:\Users\b2986\OneDrive\桌面\實習\作品集\小專題2.jpg" alt="photo"></img>
+            <div class="content">
+                <p class="title">小專題2</p>
+
+            </div>
+        </div>
+    </a>
+    <a href="https://www.figma.com/file/yGLaHSj7FejkOhVqr10MJ4/Homework3.3-%E8%87%A8%E6%91%B9?node-id=0%3A1">
+        <div class="card">
+            <img src="C:\Users\b2986\OneDrive\桌面\實習\作品集\臨摹APP.jpg" alt="photo"></img>
+            <div class="content">
+                <p class="title">臨摹</p>
+            </div>
+        </div>
+    </a>
+    </div>
+    <div class="work_container">
+    <a href="https://www.figma.com/file/NXemWpQjcGcqPrGjBib9dS/Homework3.2-%E8%A1%A8%E5%96%AE?node-id=0%3A1">
+        <div class="card">
+            <img src="C:\Users\b2986\OneDrive\桌面\實習\作品集\表單設計.jpg" alt="photo"></img>
+            <div class="content">
+                <p class="title">表單設計</p>
+            </div>
+        </div>
+    </a>
+    <a href="https://www.figma.com/file/roRs4mtBw2o3LuFBMqgaKm/Homework3.1-%E6%8C%89%E9%88%95">
+        <div class="card">
+            <img src="C:\Users\b2986\OneDrive\桌面\實習\作品集\按鈕設計.jpg" alt="photo"></img>
+            <div class="content">
+                <p class="title">按鈕設計</p>
+            </div>
+        </div>
+    </a>
+    <a href="https://www.figma.com/file/xOuYL5i54ql59hsag1IiNt/Untitled?node-id=0%3A1">
+        <div class="card">
+            <img src="C:\Users\b2986\OneDrive\桌面\實習\作品集\登入頁面設計.jpg" alt="photo"></img>
+            <div class="content">
+                <p class="title">登入頁面設計</p>
+            </div>
+        </div>
+    </a>
+</div>
+</body>
+</html>
