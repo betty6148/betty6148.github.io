@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diary</title>
+    
+    <style>
+        *{
+            font-family: "Microsoft JhengHei",monospace,sans-serif;
+        }
+
+        body{
+            background-color: #9ABCA7;
+            padding: 48px;
+            /*border: 3px solid black;*/
+            
+        }
+
+        .heading{
+            color: #1F1E1E;
+            text-align: center;
+        }
+
+        .container{
+            max-width: 100%;
+            background-color: white;
+            border-radius: 8px;
+            padding: 24px;
+            text-align: center;
+            /*border: 3px solid black;*/
+        }
+
+        .title{
+            font-size: 18px;
+            text-align: left;
+            width: 90%;
+            /*border: 3px solid black;*/
+            margin-left: 36px;
+            margin-bottom: 4px;
+            color: #333232;
+        }
+        .substance{
+            border: 3px solid #629375;
+            border-radius: 8px;
+            width: 90%;
+            text-align: left;
+        }
+        #title{
+            height: 48px;
+        }
+        #content{
+            resize : none;
+            height: 128px;
+        }
+
+        .btn{
+            margin: 36px 0 12px;
+            width: 84px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            font-size: 18px;
+            border-radius: 8px;
+            background-color: #629375;
+            border: none;
+            color: white;
+            font-weight: 700;
+            cursor: pointer; 
+        }
+
+        hr{
+            border: 3px solid white;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="bg">
+
+        <h1 class="heading">- Diary -</h1>
+
+        <div class="container">
+            <h4 class="title">標題</h4>
+            <input type="text" id="title" class="substance"/>
+            <h4 class="title">內容</h4>
+            <textarea id="content" class="substance"></textarea>
+
+            <button id="btn" class="btn">發布</button>
+            
+        </div>
+
+        
+        <hr>
+        <div id="list"></div>
+
+    </div>
+     
+    
+
+<script>
+    
+var title =document.getElementById("title");
+var content=document.getElementById("content");
+var btn=document.getElementById("btn");
+var list=document.getElementById("list");
+
+btn.addEventListener("click",afterChange)
+
+function afterChange(){
+    list.innerHTML= list.innerHTML+`
+    <div class="article">
+        <h2>${title.value}</h2>
+        <span>${content.value}</span>
+        <hr/>
+    </div>
+    `;
+    title.value="";
+    content.value="";  
+}
+
+</script>
+
+</body>
+</html>

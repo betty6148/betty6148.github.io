@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            註冊頁面
+        </title>
+        <link rel="stylesheet" type="text/css" href="style註冊.css">
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+body{
+  margin: 0;
+  padding: 0;
+  font-family: montserrat;
+  background:#424B54;
+  height: 100vh;
+  overflow: hidden;
+}
+.title{
+  position: absolute;
+  left: -200px;
+  top: -80px;
+  font-size: 84px;
+  color: white;
+  z-index: 1;
+  display: inline-block;
+}
+.center{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-30%,-50%);
+  width: 400px;
+  height: 450px;
+  padding: 50px 25px;
+  background:#93A8AC;
+  border-radius: 25px;
+
+}
+.center form{
+  box-sizing: border-box;
+  position: relative;
+  top: -10%;
+}
+form .txt_field{
+  position: relative;
+  border-bottom: 2px solid white; 
+  margin: 48px 36px;
+}
+.txt_field input{
+  position: relative;
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+
+}
+.txt_field label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: white;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none; 
+  transition: .5s;
+}
+.txt_field span::before{
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background:white;
+  transition: .5s;
+}
+.txt_field input:focus~label,
+.txt_field input:valid~label{
+  top:-5px;
+  color:white;
+}
+.txt_field input:focus~span::before,
+.txt_field input:valid~span::before{
+  width: 100%;
+}
+
+.ok{
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+  color: #edebeb;
+}
+input[type="submit"]{
+  width: 50%;
+  height: 48px;
+  border-radius: 24px;
+  margin: 24px 0;
+  border: none;
+  cursor: pointer;
+  position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,15%);
+  font-size: 18px;
+  color: #93A8AC;
+  font-weight: 700;
+}
+.member{
+  font-size: 12px;
+  text-align: center;
+  color: #edebeb;
+  text-decoration: underline;
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+        </style>
+    </head>
+    <body>
+            
+            <div class="center">
+                
+                <form method="post">
+                    <h1 class="title">Sign<br>Up</h1>
+                    <div class="txt_field">
+                        <input type="text" required>
+                        <label>E-Mail</lable>
+                    </div>
+                    <div class="txt_field">
+                        <input type="password" required>
+                        <label>Password</lable>   
+                    </div>
+                    <div class="ok">
+                        <input type="checkbox" value="agree" style="vertical-align:middle"/>
+                        <label>I agree all statements in terms of service</label>
+                    </div>
+                    <input type="submit" value="SIGN UP">
+                    <div class="member">I'm already member →</div>
+                </form>
+            </div>
+    </body>
+</html>
